@@ -7,10 +7,9 @@ using UnityEngine.UI;
 public class ItemInfomation : MonoBehaviour
 {
     public Transform whiteBoard;
+    public GameObject itemInfoUI;
     private List<GameObject> activeInfo = new List<GameObject>();
     private List<GameObject> unactiveInfo = new List<GameObject>();
-    public GameObject itemInfoUI;
-    private int itemLayer = 1 << 8;
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Item")) {

@@ -174,8 +174,6 @@ public class OVRPlayerController : MonoBehaviour
 
     private bool playerControllerEnabled = false;
 
-    public static OVRPlayerController instance;
-
     void Start()
     {
         // Add eye-depth as a camera offset from the player controller
@@ -186,13 +184,6 @@ public class OVRPlayerController : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else {
-            Destroy(gameObject);
-        }
-
         Controller = gameObject.GetComponent<CharacterController>();
 
         if (Controller == null)

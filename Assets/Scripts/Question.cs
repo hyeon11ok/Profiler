@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// 문제의 정답과 선택한 답, 정답 여부 등을 저장하는 객체
+/// </summary>
 public class Question : MonoBehaviour
 {
     [SerializeField] private int answer; // 정답 번호
@@ -14,6 +17,11 @@ public class Question : MonoBehaviour
     public bool IsRight { get { return isRight; } }
     public int s_Answer { get { return selectedAnswer; } }
 
+
+    /// <summary>
+    /// 선택 답안 변경
+    /// </summary>
+    /// <param name="num">선택한 답안 번호</param>
     public void SelectedAnswer(int num) {
         selectedAnswer = num;
 
